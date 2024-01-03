@@ -1,0 +1,197 @@
+:root {
+  --primary-color: rgb(77, 212, 77);
+  --box-one-bg: rgb(31, 233, 31);
+  --box-three-bg: yellowgreen;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+html {
+  font-size: 95%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin-right: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+nav li.active {
+  background-color: #fff;
+  padding: 10px 5px;
+  border-radius: 4px;
+}
+
+nav .active a {
+  color: #000;
+}
+
+.flex-all {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  height: 100vh;
+  padding: 30px;
+  color: #fff;
+  width: 200px;
+  position: fixed;
+  transition: 0.5s linear;
+}
+
+.sidebar h1 {
+  cursor: pointer;
+}
+
+nav li {
+  margin: 30px auto;
+}
+
+.dashboard {
+  margin: 10px auto;
+  width: 100%;
+  padding: auto 30px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 3px 4px #00000049;
+  width: 100%;
+}
+
+.card a {
+  color: #000;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxes {
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 2em;
+}
+
+.boxes.flex {
+  gap: 30px;
+}
+
+.boxes .card:first-child {
+  background-color: var(--box-one-bg);
+  color: #fff;
+}
+.boxes .card:last-child {
+  background-color: var(--box-three-bg);
+  color: #fff;
+}
+
+.card.table {
+  max-height: 55vh;
+}
+
+.dashboard__body .card {
+  max-width: 100vw;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table tbody tr td {
+  padding: 20px;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #ccc;
+}
+
+.dashboard__body h1 {
+  margin-bottom: 15px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    left: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .hamburger div {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+    margin: 7px 0px;
+    transition: 0.5s linear;
+  }
+
+  .hamburger.active div:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active div:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .dashboard {
+    width: 90vw;
+    margin: auto;
+    padding: 0px 5px 0px 30px;
+  }
+  .flex-all {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    transform: translateX(-200px);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .flex.boxes {
+    flex-direction: column;
+  }
+}

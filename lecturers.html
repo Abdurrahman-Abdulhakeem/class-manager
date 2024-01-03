@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacos Ogitech Class Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="flex-all">
+        <div>
+          <section class="sidebar">
+            <h1>CLASSMANAGER</h1>
+            <nav>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="results.html">Results</a></li>
+              <li class="active">
+                <a href="lecturers.html">Manage Lecturers</a>
+              </li>
+              <li><a href="classes.html">Classes</a></li>
+              <li><a href="index.html">Logout</a></li>
+            </nav>
+          </section>
+        </div>
+
+        <div>
+          <main class="dashboard">
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <header class="flex card">
+              <h3>Lecturers Page</h3>
+              <p>
+                <span style="margin-right: 20px">Computer Science</span
+                ><a href="index.html">Logout</a>
+              </p>
+            </header>
+
+            <section class="dashboard__body">
+              <h1>Allocated courses</h1>
+              <div class="card">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                      <th>Phone Number</th>
+                      <th>Course</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (111)</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (121)</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (311)</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (312)</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (122)</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>COM (222)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

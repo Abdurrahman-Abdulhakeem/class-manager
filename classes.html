@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacos Ogitech Class Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="flex-all">
+        <div>
+          <section class="sidebar">
+            <h1>CLASSMANAGER</h1>
+            <nav>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="results.html">Results</a></li>
+              <li><a href="lecturers.html">Manage Lecturers</a></li>
+              <li class="active"><a href="classes.html">Classes</a></li>
+              <li><a href="index.html">Logout</a></li>
+            </nav>
+          </section>
+        </div>
+
+        <div>
+          <main class="dashboard">
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <header class="flex card">
+              <h3>Classes</h3>
+              <p>
+                <span style="margin-right: 20px">Computer Science</span
+                ><a href="index.html">Logout</a>
+              </p>
+            </header>
+
+            <section class="dashboard__body">
+              <h1>Class Timetable</h1>
+              <div class="card">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Title</th>
+                      <th>Course Code</th>
+                      <th>Date & Time</th>
+                      <th>Lecturer in Charge</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Computer Packages</td>
+                      <td>Com 111</td>
+                      <td>Monday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                    <tr>
+                      <td>Operating System (OS)</td>
+                      <td>Com 121</td>
+                      <td>Monday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                    <tr>
+                      <td>Computer Hardware</td>
+                      <td>Com 311</td>
+                      <td>Monday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                    <tr>
+                      <td>Intro to Mathematics</td>
+                      <td>Mth 111</td>
+                      <td>Wednesday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                    <tr>
+                      <td>Intro to Probability</td>
+                      <td>Sta 111</td>
+                      <td>Friday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                    <tr>
+                      <td>Communication in English</td>
+                      <td>Gns 111</td>
+                      <td>Monday (10:00am)</td>
+                      <td>Mr Abdurrahman</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

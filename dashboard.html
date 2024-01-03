@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacos Ogitech Class Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="flex-all">
+        <div>
+          <section class="sidebar">
+            <h1>CLASSMANAGER</h1>
+            <nav>
+              <li class="active"><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="results.html">Results</a></li>
+              <li><a href="lecturers.html">Manage Lecturers</a></li>
+              <li><a href="classes.html">Classes</a></li>
+              <li><a href="index.html">Logout</a></li>
+            </nav>
+          </section>
+        </div>
+
+        <div>
+          <main class="dashboard">
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <header class="flex card">
+              <h3>Dashboard</h3>
+              <p>
+                <span style="margin-right: 20px">Computer Science</span
+                ><a href="index.html">Logout</a>
+              </p>
+            </header>
+
+            <div class="boxes flex">
+              <div class="card">
+                <p>Department</p>
+                <h3>Computer Science</h3>
+              </div>
+              <div class="card">
+                <p>Total no of Students</p>
+                <h3>6</h3>
+              </div>
+              <div class="card">
+                <p>Total no of Courses</p>
+                <h3>6</h3>
+              </div>
+              <!-- <div class="card">
+                <p>Department</p>
+                <h3>Computer Science</h3>
+              </div> -->
+            </div>
+
+            <section class="dashboard__body">
+              <h1>Students</h1>
+              <div class="card table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                      <th>Phone Number</th>
+                      <th>Level</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                    <tr>
+                      <td>Sarah</td>
+                      <td>Johnson</td>
+                      <td>sarah@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                    <tr>
+                      <td>John</td>
+                      <td>Mike</td>
+                      <td>John1@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                    <tr>
+                      <td>Rose</td>
+                      <td>Sharon</td>
+                      <td>rose@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                    <tr>
+                      <td>Brad</td>
+                      <td>Thompson</td>
+                      <td>brad@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                    <tr>
+                      <td>Abdurrahman</td>
+                      <td>Abdulhakeem</td>
+                      <td>abdurrahmanola21@gmail.com</td>
+                      <td>08011111111</td>
+                      <td>HNDII</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
