@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #ccc;
+ 
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
 }
@@ -91,6 +91,7 @@ header {
   color: #000;
 }
 
+
 .flex {
   display: flex;
   align-items: center;
@@ -110,6 +111,11 @@ header {
 .boxes .card:first-child {
   background-color: var(--box-one-bg);
   color: #fff;
+}
+.boxes:hover {
+  border: var(--primary-color);
+  background-color: transparent ;
+
 }
 .boxes .card:last-child {
   background-color: var(--box-three-bg);
