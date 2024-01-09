@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(77, 212, 77);
+  --primary-color: #006400;
 }
 
 header,
@@ -14,7 +14,8 @@ p {
 }
 
 nav li a.active {
-  color: var(--primary-color);
+  padding-bottom: 4px;
+  color: #089000;
 }
 
 header {
@@ -44,7 +45,7 @@ img {
       rgba(77, 212, 77, 0.301) 0,
       rgba(0, 0, 0, 0.767)
     ),
-    url("./bg-img.jpeg");
+    url("./images/bg-img.jpeg");
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
@@ -85,5 +86,11 @@ button {
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.2em;
+    margin: 0;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 40px 0px;
   }
 }

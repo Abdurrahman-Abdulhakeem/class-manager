@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacos Ogitech Class Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="flex-all">
+        <div>
+          <section class="sidebar">
+            <h1>CLASSMANAGER</h1>
+            <nav>
+              <li>
+                <a href="studentDashboard.html">Dashboard</a>
+              </li>
+              <li><a href="studentResult.html">My result</a></li>
+              <li class="active">
+                <a href="askQuestions.html">Ask questions</a>
+              </li>
+              <li><a href="studentClass.html">Classes</a></li>
+              <li><a href="index.html">Logout</a></li>
+            </nav>
+          </section>
+        </div>
+
+        <div>
+          <main class="dashboard">
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <header class="flex card">
+              <h3>Chatbot</h3>
+              <p>
+                <span style="margin-right: 20px">Computer Science</span
+                ><a href="index.html">Logout</a>
+              </p>
+            </header>
+
+            <form class="chat" id="chat">
+              <div class="default-msg">
+                <!-- <p>
+                  Welcome to classmanager chatbot! <br />
+                  I'm glad to help you out.
+                </p>
+                <p>Suggested questions</p> -->
+
+                <!-- 
+                <p>
+                  classmanager is useful for Lorem ipsum dolor sit, amet
+                  consectetur adipisicing elit. Fugit, commodi. Doloribus fugit
+                  ex iusto temporibus distinctio, eum tenetur non obcaecati sit
+                  quaerat quidem architecto, ad tempora atque reiciendis illo a?
+                </p> -->
+              </div>
+
+              <div class="chat-input">
+                <div class="pre-question">
+                  <span id="question-1">What is classmanager about?</span>
+                  <span id="question-2">How to check my result?</span>
+                  <span id="question-3"
+                    >where to find the department updates?</span
+                  >
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="getUserChat"
+                    placeholder="Ask question"
+                  />
+                  <input type="submit" value="Send" />
+                </div>
+              </div>
+            </form>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar.classList.toggle("active");
+      });
+
+      const getUserInput = document.getElementById("getUserChat");
+      const chatForm = document.getElementById("chat");
+      const preQuestions = document.querySelector(".pre-question");
+      const questionOne = document.getElementById("question-1");
+      const questionTwo = document.querySelector("#question-2");
+      const questionThree = document.querySelector("#question-3");
+
+      const defaultMsg = document.querySelector(".default-msg");
+
+      const greetings = ["hello", "hi", ""];
+      const botGreetings = [
+        "Hi, i'm glad to help",
+        "Nice to meet you!",
+        "Hello What can i help you with today?",
+      ];
+      const farewells = ["bye", "goodbye", "later", "thanks", "thank you"];
+      const botFarewells = [
+        "Nice talking with you!",
+        "It's good spending time with you",
+        "Okay bye, i hope i answered you",
+        "Catch you up later",
+      ];
+      const botName = [
+        "what is your name",
+        "tell me your name",
+        "how are you called",
+      ];
+      const botNameAnswer = [
+        "I preferred to be called Nacosbot",
+        "My name is Nacosbot",
+      ];
+
+      setTimeout(() => {
+        messageCreator(
+          "Welcome to classmanager chatbot! <br> I'm glad to help you out."
+        );
+
+        setTimeout(() => {
+          messageCreator("Suggested questions.");
+
+          preQuestions.style.display = "block";
+        }, 500);
+      }, 700);
+
+      function messageCreator(message, className) {
+        const pInMsg = document.createElement("p");
+        pInMsg.innerHTML = message;
+        className ? pInMsg.classList.add(className) : "";
+        return defaultMsg.append(pInMsg);
+      }
+
+      function setQuestionAnswers(question, answer) {
+        question.addEventListener("click", () => {
+          messageCreator(answer);
+        });
+      }
+
+      setQuestionAnswers(
+        questionOne,
+        "classmanager is designed to enhance and facilitates the departmental activities, informations are shared through the platform where student can find announcement made in school even when absent, they can easily login and see what's going on. It is also used to assess class timetables and check student result."
+      );
+
+      setQuestionAnswers(
+        questionTwo,
+        "To check your result, you can quickly go to the tab located at the left side and navigate to 'My result' click on to it, your result will display on your screen, you can contact your department if your result does not display."
+      );
+
+      setQuestionAnswers(
+        questionThree,
+        "Navigate to dashboard, below the announcement section you'll find all the important updates in the department."
+      );
+
+      function randomResponse(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      }
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userInputValue = getUserInput.value.trim("");
+        if (greetings.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(botGreetings));
+          }, 200);
+          getUserInput.value = "";
+        } else if (farewells.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(botFarewells));
+          }, 200);
+          getUserInput.value = "";
+        } else if (botName.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(botNameAnswer));
+          }, 200);
+          getUserInput.value = "";
+        } else {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(
+              "I'm sorry i can't find an answer to that, i'm still under training to understand more words, i'll be glad to help you with this in the future. Thank you!"
+            );
+          }, 80);
+
+          getUserInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

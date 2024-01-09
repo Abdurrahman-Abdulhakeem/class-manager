@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacos Ogitech Class Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="flex-all">
+        <div>
+          <section class="sidebar">
+            <h1>CLASSMANAGER</h1>
+            <nav>
+              <li class="active">
+                <a href="studentDashboard.html">Dashboard</a>
+              </li>
+              <li><a href="studentResult.html">My result</a></li>
+              <li><a href="askQuestions.html">Ask questions</a></li>
+              <li><a href="studentClass.html">Classes</a></li>
+              <li><a href="index.html">Logout</a></li>
+            </nav>
+          </section>
+        </div>
+
+        <div>
+          <main class="dashboard">
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="msg">
+              <a href="askQuestions.html">
+                <p>Any question ?</p>
+                <div></div>
+              </a>
+            </div>
+
+            <header class="flex card">
+              <h3>Dashboard</h3>
+              <p>
+                <span style="margin-right: 20px">Computer Science</span
+                ><a href="index.html">Logout</a>
+              </p>
+            </header>
+
+            <div class="boxes flex">
+              <div class="card">
+                <p>Department</p>
+                <h3>Computer Science</h3>
+              </div>
+              <div class="card">
+                <p>Student ID</p>
+                <h3>I10C38</h3>
+              </div>
+              <div class="card">
+                <p>Total no of Courses</p>
+                <h3>6</h3>
+              </div>
+            </div>
+
+            <section class="dashboard__body">
+              <h1>Announcement</h1>
+              <div class="flex announce">
+                <div class="box">
+                  <img src="images/cbt.jpg" alt="" />
+                  <div>
+                    <h2 style="text-align: center">CBT</h2>
+                    <div class="flex">
+                      <span>
+                        <h3>Date</h3>
+                        <p>Feb 06 2024</p>
+                      </span>
+                      <span>
+                        <h3>Venue</h3>
+                        <p>ICT hall</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <img src="images/exam.jpg" alt="" />
+                  <div>
+                    <h2 style="text-align: center">Examination</h2>
+                    <div class="flex">
+                      <span>
+                        <h3>Date</h3>
+                        <p>April 10 2024</p>
+                      </span>
+                      <span>
+                        <h3>Venue</h3>
+                        <p>TBD</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <img src="images/exco.jpg" alt="" />
+                  <div>
+                    <h2 style="text-align: center">Executive handover</h2>
+                    <div class="flex">
+                      <span>
+                        <h3>Date</h3>
+                        <p>March 07 2024</p>
+                      </span>
+                      <span>
+                        <h3>Venue</h3>
+                        <p>Department</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <img src="images/ot.jpg" alt="" />
+                  <div>
+                    <h2 style="text-align: center">Orientation</h2>
+                    <div class="flex">
+                      <span>
+                        <h3>Date</h3>
+                        <p>Jan 20 2024</p>
+                      </span>
+                      <span>
+                        <h3>Venue</h3>
+                        <p>Department</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        sidebar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
