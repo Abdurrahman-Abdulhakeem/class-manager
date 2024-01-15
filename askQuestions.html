@@ -8,8 +8,8 @@
   </head>
   <body>
     <div class="container">
-      <section class="flex-all">
-        <div>
+      <!-- <section class="flex-all"> -->
+      <!-- <div>
           <section class="sidebar">
             <h1>CLASSMANAGER</h1>
             <nav>
@@ -24,72 +24,65 @@
               <li><a href="index.html">Logout</a></li>
             </nav>
           </section>
-        </div>
+        </div> -->
 
-        <div>
-          <main class="dashboard">
-            <div class="hamburger">
+      <div>
+        <main class="dashboard">
+          <!-- <div class="hamburger">
               <div></div>
               <div></div>
               <div></div>
-            </div>
-
+            </div> -->
+          <!-- 
             <header class="flex card">
               <h3>Chatbot</h3>
               <p>
                 <span style="margin-right: 20px">Computer Science</span
                 ><a href="index.html">Logout</a>
               </p>
-            </header>
+            </header> -->
 
-            <form class="chat" id="chat">
-              <div class="default-msg">
-                <!-- <p>
+          <form class="chat" id="chat">
+            <div class="default-msg">
+              <!-- <p>
                   Welcome to classmanager chatbot! <br />
                   I'm glad to help you out.
                 </p>
                 <p>Suggested questions</p> -->
 
-                <!-- 
+              <!-- 
                 <p>
                   classmanager is useful for Lorem ipsum dolor sit, amet
                   consectetur adipisicing elit. Fugit, commodi. Doloribus fugit
                   ex iusto temporibus distinctio, eum tenetur non obcaecati sit
                   quaerat quidem architecto, ad tempora atque reiciendis illo a?
                 </p> -->
-              </div>
+            </div>
 
-              <div class="chat-input">
-                <div class="pre-question">
-                  <span id="question-1">What is classmanager about?</span>
-                  <span id="question-2">How to check my result?</span>
-                  <span id="question-3"
-                    >where to find the department updates?</span
-                  >
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    id="getUserChat"
-                    placeholder="Ask question"
-                  />
-                  <input type="submit" value="Send" />
-                </div>
+            <div class="chat-input">
+              <div class="pre-question">
+                <span id="question-1">What is classmanager about?</span>
+                <span id="question-2">How to check my result?</span>
+                <span id="question-3"
+                  >where to find the department updates?</span
+                >
               </div>
-            </form>
-          </main>
-        </div>
-      </section>
+              <div>
+                <input
+                  type="text"
+                  id="getUserChat"
+                  placeholder="Ask question"
+                />
+                <input type="submit" value="Send" />
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+      <!-- </section> -->
     </div>
 
     <script>
-      const sidebar = document.querySelector(".sidebar");
-      const hamburger = document.querySelector(".hamburger");
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        sidebar.classList.toggle("active");
-      });
-
       const getUserInput = document.getElementById("getUserChat");
       const chatForm = document.getElementById("chat");
       const preQuestions = document.querySelector(".pre-question");
