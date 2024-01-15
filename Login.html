@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Login Here!</title>
 </head>
 <body>
-    <div class="forms">
-        <form action="get" >
-            <input type="text" value="Email" placeholder="Enter Email Address">
-            <input type="password" value="Password" placeholder="Enter Password">
+    <div class="container-box">
+    <div class="form-container">
+        
+        <form onsubmit="checkData(event)">
+            <h1>Login Here</h1>
+            <div class="box">
+            <input type="text" id="Email" placeholder="Enter Email Address" >
+            </div>
 
-            <Button>Login</Button>
+            <div class="box">
+            <input type="password" id="Password" placeholder="Enter Password">
+            </div>
+
+            <div class="btn">
+            <Button type="submit" value="submit" class='submit-btn' onclick="checkData()">Login</Button>
+            </div>
         </form>
     </div>
+    </div>
+    <script src="js/Login.js"></script>
 </body>
 </html>
