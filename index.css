@@ -5,6 +5,8 @@
 body {
   background-color: #fff;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 header,
@@ -51,28 +53,28 @@ img {
       rgba(0, 0, 0, 0.767)
     ),
     url("./images/bg-img.jpeg");
-
-  font-family: Arial, Helvetica, sans-serif;
-  height: 50vh;
-  width: 100vw;
+    
+ font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #fff;
   overflow-x: hidden;
-  background-color: #ccc;
+   background-color: #ccc;
 }
+
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(55vh - 200px);
+  height: calc(100vh - 200px);
   max-width: 700px;
   margin: auto;
   text-align: center;
   font-size: 20px;
-  padding-top: 50px;
 }
 
 .content div {
@@ -83,77 +85,6 @@ img {
   margin: 20px 0px;
 }
 
-.about_page {
-  margin: 60px 0px;
-}
-
-.about_page .set {
-  margin: 40px 0px;
-}
-
-button {
-  display: inline-block;
-  all: unset;
-  background-color: var(--primary-color);
-  padding: 10px 28px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 18px;
-}
-button.about-us:hover {
-  background-color: transparent;
-  border: 2px solid #006400;
-  color: #fff;
-}
-button.about-us {
-  background-color: #006400;
-  color: #fff;
-}
-.container-box {
-  margin-top: 120px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-container{
-  
-  border-radius: 25px;
-  width: 50%;
-  padding: 40px;
-  height: auto;
-  position: relative;
-  background-color: #f5f5f5;
-  
-}
-.submit-btn{
-  margin-top: 30px;
-  background-color: #089000 ;
-  color: #fff;
-}
-
-.about {
-  background-color: #fff;
-  margin: 50px auto 0px;
-  padding: 50px 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 950px;
-  text-align: center;
-}
-.about h1 {
-  font-size: 40px;
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
-  color: #000000;
-}
-.about h1 span {
-  color: #006400;
-}
 button {
   display: inline-block;
   all: unset;
@@ -167,38 +98,64 @@ button.about-us:hover{
   background-color: transparent;
   border: 2px solid #006400;
   color: #fff;
-}button.about-us{
+}
+button.about-us{
   background-color: #006400;
   color: #fff;
 }
 
-.about{
+
+.about {
   background-color: #fff;
-  margin-top: 100px;
-  padding: 50px ;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px auto 0px;
+  padding: 50px 0px;
+  max-width: 950px;
+  text-align: center;
 }
-.about h1{
+.about h1 {
   font-size: 40px;
   text-align: center;
   font-weight: 900;
   margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
   color: #000000;
 }
-.about h1 span{
- color: #006400;
+.about h1 span {
+  color: #006400;
+}
+.about p {
+  text-align: start;
+}
+.container-box {
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.form-container{
+  border-radius: 25px;
+  width: 50%;
+  padding: 80px;
+  height: auto;
+  position: relative;
+  background-color: #f5f5f5;
+  
+}
+.submit-btn{
+  margin-top: 30px;
+  background-color: #089000 ;
+  color: #fff;
+}
 form .box{
   width: 100%;
   margin-top: 20px ;
 }
 form .box input{
   width: 100%;
-  height: 40px;
+  height: 20px;
   border: 1px solid #089000;
   padding: 15px;
   border-radius: 10px;
@@ -230,25 +187,7 @@ footer a {
   color: #fff;
 }
 
-.forms {
-  margin: auto;
-  width: 50%;
-  padding: 50px;
-  height: auto;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;
-  display: grid;
-  place-items: center;
-  position: relative;
-  background-color: #b1ccb1;
-}
-form {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.2em;
