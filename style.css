@@ -255,6 +255,27 @@ table tbody tr:nth-of-type(even) {
 }
 
 /* Chatbot  */
+.askQs {
+  margin-left: 30px;
+}
+.nacosbot {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nacosbot span:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nacosbot span a:last-child {
+  color: #000;
+}
 
 .chat-input {
   position: fixed;
@@ -265,7 +286,7 @@ table tbody tr:nth-of-type(even) {
 .chat-input div {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -287,7 +308,8 @@ table tbody tr:nth-of-type(even) {
   border-radius: 10px;
   padding: 15px;
   font-size: 25px;
-  width: 60vw;
+  width: 100%;
+  margin-right: 30px;
   background: #ccc;
 }
 
