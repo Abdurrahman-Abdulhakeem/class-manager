@@ -33,7 +33,9 @@
             </div>
 
             <header class="flex card">
-              <h3>Dashboard</h3>
+             
+             <div id="userFirstname"></div>
+
               <p>
                 <span style="margin-right: 20px">Computer Science</span
                 ><a href="index.html">Logout</a>
@@ -130,12 +132,25 @@
     </div>
 
     <script>
+
+       document.addEventListener('DOMContentLoaded', function () {
+    var userFirstname = localStorage.getItem('userFirstname');
+
+    if (userFirstname) {
+        // Display the user's first name on the dashboard
+        document.getElementById('userFirstname').innerText = 'Welcome, ' + userFirstname;
+    }
+});
+
       const sidebar = document.querySelector(".sidebar");
       const hamburger = document.querySelector(".hamburger");
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         sidebar.classList.toggle("active");
       });
+
+
+
     </script>
   </body>
 </html>
