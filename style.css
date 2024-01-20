@@ -350,7 +350,20 @@ table tbody tr:nth-of-type(even) {
 .msg div {
   height: 70px;
   width: 70px;
-  background-color: #bfffbf;
+  background-color: #005a00;
   border-radius: 50%;
   border-bottom-left-radius: 0;
+  text-align: center;
+  justify-content: center;
+  place-content: center;
+  padding: 22px;
+  
+}
+.msg div a{
+text-align: center;
+font-size: 30px;
+justify-content: center;
+
+
+
 }
