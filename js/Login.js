@@ -1,14 +1,15 @@
 function checkData(event) {
     event.preventDefault();
 
-    var enteredEmail = document.getElementById('Email').value;
     var enteredPassword = document.getElementById('Password').value;
+    var enteredStudentid = document.getElementById('Studentid').value;
 
-    var storedEmail = localStorage.getItem('userEmail');
+   
     var storedPassword = localStorage.getItem('userPassword');
+    var storedStudentid = localStorage.getItem('userStudentid');
 
-    if (storedEmail && storedPassword) {
-        if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
+    if (storedStudentid && storedPassword) {
+        if ( enteredPassword === storedPassword  && enteredStudentid === storedStudentid) {
             alert('Login successful');
             // Redirect to dashboard.html
             window.location.href = 'studentDashboard.html'; 

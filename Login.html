@@ -13,15 +13,22 @@
         <form onsubmit="checkData(event)">
             <h1>Login Here</h1>
             <div class="box">
-            <input type="text" id="Email" placeholder="Enter Email Address" >
-            </div>
+                <input type="text" placeholder="Student Id" id="Studentid" />
+              </div>
 
             <div class="box">
             <input type="password" id="Password" placeholder="Enter Password">
             </div>
 
-            <div class="btn">
+           
+
+            <div class="btn flex">
             <Button type="submit" value="submit" class='submit-btn' onclick="checkData()">Login</Button>
+            
+
+            <button class="btn btn-sm" id="home-btn">
+                <a href="index.html" style="color: #fff; text-decoration:none;">Go Home</a>
+              </button>
             </div>
         </form>
     </div>

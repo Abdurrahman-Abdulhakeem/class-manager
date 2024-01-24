@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container botcontainer">
       <!-- <section class="flex-all"> -->
       <!-- <div>
           <section class="sidebar">
@@ -30,7 +30,9 @@
         <main class="askQs">
           <div class="nacosbot">
             <span> NacosBot</span>
-            <span><a href="index.html"> Go home</a></span>
+            <span
+              ><a href="index.html" style="font-weight: 700"> Go home</a></span
+            >
           </div>
           <!-- <div class="hamburger">
               <div></div>
@@ -65,11 +67,16 @@
 
             <div class="chat-input">
               <div class="pre-question">
-                <span id="question-1">What is classmanager about?</span>
-                <span id="question-2">How to check my result?</span>
+                <span id="question-1">What is Classmanager?</span>
+                <span id="question-2">How to Check My Result?</span>
                 <span id="question-3"
-                  >where to find the department updates?</span
+                  >How can i check the departmental updates?</span
                 >
+                <span id="question-4">
+                  <a style="color: #005a00"> what time is my lecture </a></span
+                >
+                <span id="question-5">when will result be released?</span>
+                <span id="question-6">Who are my lecturers?</span>
               </div>
               <div>
                 <input
@@ -93,21 +100,48 @@
       const questionOne = document.getElementById("question-1");
       const questionTwo = document.querySelector("#question-2");
       const questionThree = document.querySelector("#question-3");
+      const questionFive = document.querySelector("#question-5");
+      const questionFour = document.querySelector("#question-4");
+      const questionSix = document.querySelector("#question-6");
 
       const defaultMsg = document.querySelector(".default-msg");
 
-      const greetings = ["hello", "hi", ""];
+      const greetings = ["hello", "hi", "hey", "whatsup", "can you help"];
       const botGreetings = [
         "Hi, i'm glad to help",
         "Nice to meet you!",
         "Hello What can i help you with today?",
       ];
+      const className = ["what is classmanager"];
+      const classAns = [
+        "classmanager is designed to enhance and facilitates the departmental activities, informations are shared through the platform where student can find announcement made in school even when absent, they can easily login and see what's going on. It is also used to assess class timetables and check student result",
+      ];
+      const resultName = ["How to check my result"];
+      const resultAns = [
+        "To check your result, you can quickly go to the tab located at the left side and navigate to 'My result' click on to it, your result will display on your screen, you can contact your department if your result does not display.",
+      ];
+      const updateName = ["How can i check departmental updates"];
+      const updateAns = [
+        "Navigate to dashboard, below the announcement section you'll find all the important updates in the department.",
+      ];
+      const releaseName = ["When will result be released"];
+      const releaseAns = [
+        "Navigate to dashboard, below the announcement section you'll find all the important updates in the department.",
+      ];
+      const lectureName = ["What time is my lecture"];
+      const lectureAns = [
+        "Navigate to dashboard, below the announcement section you'll find all the important updates in the department.",
+      ];
+
+      
+
+
       const farewells = ["bye", "goodbye", "later", "thanks", "thank you"];
       const botFarewells = [
         "Nice talking with you!",
         "It's good spending time with you",
         "Okay bye, i hope i answered you",
-        "Catch you up later",
+        "i'm glad i could help",
       ];
       const botName = [
         "what is your name",
@@ -148,6 +182,18 @@
         questionOne,
         "classmanager is designed to enhance and facilitates the departmental activities, informations are shared through the platform where student can find announcement made in school even when absent, they can easily login and see what's going on. It is also used to assess class timetables and check student result."
       );
+      setQuestionAnswers(
+        questionFour,
+        "Here is how you can get your class schedule, Login to the student dashboard and by the right,click on classes to see classes scheduled for you"
+      );
+      setQuestionAnswers(
+        questionFive,
+        "when result is out, it will be announced at the department or you can check the announcement tab for more information."
+      );
+      setQuestionAnswers(
+        questionSix,
+        "The lecturers incharge has been allocated to each courses "
+      );
 
       setQuestionAnswers(
         questionTwo,
@@ -184,11 +230,46 @@
             messageCreator(randomResponse(botNameAnswer));
           }, 200);
           getUserInput.value = "";
-        } else {
+        } else if (className.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(classAns));
+          }, 200);
+          getUserInput.value = "";
+        } 
+        else if (updateName.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(updateAns));
+          }, 200);
+          getUserInput.value = "";
+        } 
+        else if (lectureName.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(lectureAns));
+          }, 200);
+          getUserInput.value = "";
+        } 
+        else if (releaseName.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(releaseAns));
+          }, 200);
+          getUserInput.value = "";
+        } 
+        else if (resultName.includes(userInputValue.toLowerCase())) {
+          messageCreator(userInputValue, "user-text");
+          setTimeout(() => {
+            messageCreator(randomResponse(resultAns));
+          }, 200);
+          getUserInput.value = "";
+        }
+        else {
           messageCreator(userInputValue, "user-text");
           setTimeout(() => {
             messageCreator(
-              "I'm sorry i can't find an answer to that, i'm still under training to understand more words, i'll be glad to help you with this in the future. Thank you!"
+              "I'm sorry i can't find an answer to that, but you can navigate back to the homepage, i'll be glad to help you with this in the nearest future. Thank you!"
             );
           }, 80);
 

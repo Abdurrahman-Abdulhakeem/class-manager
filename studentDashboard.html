@@ -10,8 +10,8 @@
     <div class="container">
       <section class="flex-all">
         <div>
-          <section class="sidebar">
-            <h1>CLASSMANAGER</h1>
+          <section class="sidebar" id="sidebar">
+            <a href="index.html">ClassManager</a>
             <nav>
               <li class="active">
                 <a href="studentDashboard.html">Dashboard</a>
@@ -47,9 +47,9 @@
                 <p>Department</p>
                 <h3>Computer Science</h3>
               </div>
-              <div class="card">
+              <div class="card" id="second-card">
                 <p>Student ID</p>
-                <h3>I10C38</h3>
+                <h3 id="userStudentid"></h3>
               </div>
               <div class="card">
                 <p>Total no of Courses</p>
@@ -57,13 +57,13 @@
               </div>
             </div>
 
-            <section class="dashboard__body">
+            <section class="dashboard__body" id="dashboard">
               <h1>Announcement</h1>
               <div class="flex announce">
                 <div class="box">
                   <img src="images/cbt.jpg" alt="" />
                   <div>
-                    <h2 style="text-align: center">CBT</h2>
+                    <h2 style="text-align: start">CBT</h2>
                     <div class="flex">
                       <span>
                         <h3>Date</h3>
@@ -79,7 +79,7 @@
                 <div class="box">
                   <img src="images/exam.jpg" alt="" />
                   <div>
-                    <h2 style="text-align: center">Examination</h2>
+                    <h2 style="text-align: start">Examination</h2>
                     <div class="flex">
                       <span>
                         <h3>Date</h3>
@@ -95,7 +95,7 @@
                 <div class="box">
                   <img src="images/exco.jpg" alt="" />
                   <div>
-                    <h2 style="text-align: center">Executive handover</h2>
+                    <h2 style="text-align: start">Executive handover</h2>
                     <div class="flex">
                       <span>
                         <h3>Date</h3>
@@ -111,7 +111,7 @@
                 <div class="box">
                   <img src="images/ot.jpg" alt="" />
                   <div>
-                    <h2 style="text-align: center">Orientation</h2>
+                    <h2 style="text-align: start">Orientation</h2>
                     <div class="flex">
                       <span>
                         <h3>Date</h3>
@@ -140,6 +140,15 @@
         // Display the user's first name on the dashboard
         document.getElementById('userFirstname').innerText = 'Welcome, ' + userFirstname + '👋' ;
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var userStudentid = localStorage.getItem('userStudentid');
+
+  if (userStudentid) {
+      // Display the user's first name on the dashboard
+      document.getElementById('userStudentid').innerText =  userStudentid  ;
+  }
 });
 
       const sidebar = document.querySelector(".sidebar");
